@@ -25,6 +25,8 @@ app.use('/api', require('./Routes/CreatUser'));
 app.use('/api', require('./Routes/DisplayData'));
 app.use('/api', require('./Routes/OrderData'));
 
+
+const port = process.env.PORT || 4000;
 app.listen(port, () => {
     console.log(`Example app listening on port ${port}`)
 })
