@@ -1,8 +1,8 @@
 const express = require('express')
 const app = express()
-const mongoDB = require("./db");
+const database = require("./db");
 const cors = require('cors');
-mongoDB();
+database();
 
 app.get("/", (req, res) => {
     res.send({ status: ok });
