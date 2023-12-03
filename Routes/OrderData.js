@@ -19,6 +19,11 @@ Router.post('/orderData', async (req, res) => {
                 order_data: [data]
             }).then(() => {
                 res.json({ success: true })
+            }).then(()=>{
+                Order.create({
+                    email: 'admin@gmail.com',
+                    order_data:[data]
+                })
             })
         } catch (error) {
             console.log(error.message)
